@@ -8,6 +8,7 @@ const app = require('router')();
 
 app.use(body.json({ limit: '50mb' }));
 app.use(require('./Middlewares/json'));
+app.use(require('./Middlewares/cors'));
 
 app.get('/', require('./Controllers/status'));
 
